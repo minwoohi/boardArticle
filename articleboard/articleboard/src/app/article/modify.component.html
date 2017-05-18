@@ -1,0 +1,9 @@
+Modify PAge
+
+<form #modifyForm="ngForm" (ngSubmit)="modifyArticle(modifyForm)">
+  <input type="hidden" name="_id" [(ngModel)]="article._id"/>
+  <input type="text" name="subject" [(ngModel)]="article.subject"><br/>
+  <input type="text" name="writer" [(ngModel)]="article.writer"><br/>
+  <textarea name="content" [(ngModel)]="article.content"></textarea><br/>
+  <input type="submit" value="수정"/>
+</form>

@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <td>번호</td>
+    <td>제목</td>
+    <td>작성자</td>
+    <td>조회수</td>
+  </tr>
+  <tr *ngFor="let article of articles; let i = index">
+    <td>{{i + 1}}</td>
+    <td><a [routerLink]="['/article', article._id]">{{article.subject}}</a></td>
+    <td>{{article.writer}}</td>
+    <td>{{article.readCount}}</td>
+  </tr>
+</table><br/>
+<a [routerLink]="['/write']">글 작성</a>

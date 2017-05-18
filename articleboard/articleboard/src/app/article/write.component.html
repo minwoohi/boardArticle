@@ -1,0 +1,14 @@
+<!-- action 사용하면 다른 화면 보여주기 때문에 사용할 수 없다.
+  Angular가 WriteComponent에서 Form 데이터 제어하기 위해 #writeForm을 ngForm 형태로 사용하겠다.
+   FormsModule 필요함. angular-cli 수행시 작성됨. submit 버튼 클릭시 바인드이벤트
+   ngModel : 데이터 컴포넌트로 전송 여부
+-->
+<form #writeForm="ngForm" (ngSubmit)="writeArticle(writeForm)">
+  <input type="text" name="subject" placeholder="제목" ngModel ><br/>
+  <input type="text" name="writer" placeholder="작성자" ngModel><br/>
+  <textarea name="content" placeholder="내용" ngModel></textarea><br/>
+  <input type="submit" value="작성"/>
+</form>
+
+<!--#subject-->
+<!--<div [innerText]="subject.value"></div>-->

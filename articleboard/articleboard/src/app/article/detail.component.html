@@ -1,0 +1,9 @@
+Detail Page
+<h1>제목 : {{article.subject}}</h1>
+<hr/>
+<p>내용 : {{article.content}}</p><br/>
+<p>조회수 : {{article.readCount}}</p>
+
+<a [routerLink]="['']">목록 보기</a> |
+<a [routerLink]="['/modify', article._id]">글 수정</a>
+<input type="button" (click)="deleteArticle(article._id)" value="삭제"/>
